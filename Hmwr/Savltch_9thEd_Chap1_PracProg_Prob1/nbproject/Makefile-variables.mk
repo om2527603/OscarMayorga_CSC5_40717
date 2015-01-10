@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Debug=savltch_9thed_chap1_progproj3
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/savltch_9thed_chap1_progproj3
+CND_ARTIFACT_NAME_Debug=savltch_9thed_chap1_pracprog_prob1
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/savltch_9thed_chap1_pracprog_prob1
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Debug=savltch9thedchap1progproj3.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/savltch9thedchap1progproj3.tar
+CND_PACKAGE_NAME_Debug=savltch9thedchap1pracprogprob1.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/savltch9thedchap1pracprogprob1.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Release=savltch_9thed_chap1_progproj3
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/savltch_9thed_chap1_progproj3
+CND_ARTIFACT_NAME_Release=savltch_9thed_chap1_pracprog_prob1
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/savltch_9thed_chap1_pracprog_prob1
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Release=savltch9thedchap1progproj3.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/savltch9thedchap1progproj3.tar
+CND_PACKAGE_NAME_Release=savltch9thedchap1pracprogprob1.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/savltch9thedchap1pracprogprob1.tar
 #
 # include compiler specific variables
 #
