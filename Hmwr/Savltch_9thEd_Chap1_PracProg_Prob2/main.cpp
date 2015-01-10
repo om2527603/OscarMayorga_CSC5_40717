@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Oscar Mayorga 
  * Created on January 9, 2015, 10:10 PM
- * Porpuse: hmwr, Solution for a monitary value program.
+ * Porpuse: hmwr, Practice Programs Problem 2
  */
 
 //System librery
