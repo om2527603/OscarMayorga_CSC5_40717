@@ -3,7 +3,7 @@
  * Author: Capture Station
  *
  * Created on January 10, 2015, 11:19 PM
- *Porpuse: hmwrk, Practice Programs Problem 3
+ *Porpuse: hmwrk, Practice Programs Problem 4
  */
 
 //System librery
@@ -37,6 +37,7 @@ int main( )
     cout<< "you have ";
     cout<< total_peas;
     cout<< " peas in all the pods."<<endl;
+   
     cout<< "Good-bye!";
     return 0;
 }
