@@ -20,9 +20,9 @@ using namespace std;
 //Execution Begins here!
 int main( )
 {
-    int width, height, total_Length;
+    int width, height, width2,height2, total_Length2, total_Length, total_Area;
     cout<< "Hello! "<<endl;
-    cout<< "This Program helps you find the Length of a recangle."<<endl;
+    cout<< "This program helps you find the total Area of two rectangles."<<endl;
     cout<< "Press return after entering a number."<<endl;
     cout<< "Enter the with;|n";
     cin>> width;
@@ -38,6 +38,25 @@ int main( )
     cout<< "the total Length is ";
     cout<< total_Length;
     cout<< "feet."<<endl;
+    
+    cout<< "Enter the with2;|n";
+    cin>> width2;
+    cout<< "Enter the height2:|n";
+    cin>>height2;
+    total_Length2=width2*height2;
+    cout<< "If the width is ";
+    cout<< width2;
+    cout<< "feet ";
+    cout<< "and the heigth is ";
+    cout<< height2;
+    cout<< "feet, then ";
+    cout<< "the total Length is ";
+    cout<< total_Length2;
+    cout<< "feet."<<endl;
+    total_Area= total_Length+total_Length2;
+    cout<< "The total area of the two rectangles is ";
+    cout<<total_Area;
+    cout<< "feet."<<endl; 
     cout<< "Good-bye!";
     return 0;
 }
