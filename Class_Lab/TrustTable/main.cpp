@@ -2,8 +2,7 @@
  * File:   main.cpp
  * Author: Oscar Mayorga
  * Created on January 13, 2015, 9:15 AM
- * Purpose: Illustrate file i/o and random 
- * numbers
+ *
  */
 
 //System Library 
