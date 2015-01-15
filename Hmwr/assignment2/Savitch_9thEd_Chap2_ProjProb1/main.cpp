@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Oscar Mayorga
  * Created on January 14, 2015, 10:15 AM
- * Purpose: Babylonian Square root calculator
+ * Purpose: Show how much diet Coke can kill you!
  */
 
 //System Libraries
