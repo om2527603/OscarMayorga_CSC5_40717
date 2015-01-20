@@ -37,6 +37,8 @@ int main(int argc, char** argv) {
     cout<<"Solution 5 Gaddis  7thEd Chap 3 Prob 11"<<endl;
     cout<<"Solution 6 Gaddis  7thEd Chap 3 Prob 19"<<endl;
     cout<<"Solution 7 Gaddis  7thEd Chap 3 Prob 22"<<endl;
+    cout<<"Solution 8 savitch 9thEd Chap 2 Prob 05"<<endl;
+    cout<<"Solution 9 savitch 9thEd Chap 2 Prob 04"<<endl;
 
     cout<<"Input which solution you would like to see"<<endl;
     int choice;
@@ -250,13 +252,72 @@ int main(int argc, char** argv) {
         
         case 8:{
             cout<<"You have chosen Solution 8"<<endl;
-             
+            //Declare variables
+            const float MAX = 300;//Maximum capacity of people that can attend 
+            float Number_of_people; 
+            float SpPlAv;//Number of spaces available for people  
+            float NumPlExc;//Number of people that have to be excluded it
+            cout<<"Enter the number of people attending the meeting: ";
+            cin>>Number_of_people;
+
+            //Calculations 
+            SpPlAv=MAX-Number_of_people;
+            NumPlExc=Number_of_people-MAX;
+
+            if (Number_of_people < MAX)
+            {
+                cout<<"You can have a meeting legally."<<endl;
+                cout<<"Make plans to make a successful meeting."<<endl;
+                cout<<"You can actually invite more people."<<endl;
+                cout<<"There are still ";
+                SpPlAv=MAX-Number_of_people;
+                cout<<SpPlAv;
+                cout<<" spaces availible for more people"<<endl;
+            }
+
+            else 
+            {
+                cout<<"The meeting cannot be held as planned do to fire regulations."<<endl;
+                cout<<"You have to exclude people to plan the meeting again."<<endl;
+                cout<<"the amount of people to be exclude its: ";
+                NumPlExc=Number_of_people-MAX; 
+                cout<<NumPlExc<<endl;
+            } 
             break; 
          }
         
         
         case 9:{
             cout<<"You have chosen Solution 9"<<endl;
+            //Declare variables
+    float intRate;//Interest rate 
+    float FcVl;//Face Value 
+    float AmtNdIt;//Amount need it for the consumer 
+    float nMthPym;//Number of months to pay the loan 
+    float TtlIntOw;//Total amount of interest owed
+    float  MthlyPym;//Monthly payments
+    float Years;//Years for the loan 
+    float Intr;//Interest per month 
+    //Calculations
+    TtlIntOw=Years*Intr;
+    Intr=intRate*AmtNdIt;
+    Years=nMthPym/12;
+    MthlyPym=FcVl/nMthPym;
+    FcVl=TtlIntOw+AmtNdIt;
+    
+    cout<<"What is the interest rate?"<<endl;
+    cout<<"Note: insert the interest rate as a decimal."<<endl;
+    cin>>intRate; 
+    cout<<"What is the Amount need it?"<<endl;
+    cin>>AmtNdIt;
+    cout<<"How many months are you going to be paying for the loan?"<<endl;
+    cin>>nMthPym;
+    cout<<"The face value is = ";
+    FcVl=TtlIntOw+AmtNdIt;
+    cout<<FcVl<<endl;
+    cout<<"The Monthly payment would be = ";
+    MthlyPym=FcVl/nMthPym;
+    cout<<MthlyPym<<endl;
              
             break; 
          }
