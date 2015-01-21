@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
- * Author: Dr. Mark E. Lehr
- * Created on January 20, 2015, 10:30 AM
+ * Author: Oscar Mayorga 
+ * Created on January 20, 2015, 10:31 AM
  */
 
 //System Libraries

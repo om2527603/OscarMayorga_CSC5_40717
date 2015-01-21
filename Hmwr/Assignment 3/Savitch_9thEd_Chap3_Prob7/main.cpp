@@ -21,7 +21,10 @@ using namespace std;
 //Execution begins here!
 int main(int argc, char** argv) {\
     //Declare variables
-    float exactEx,approxEx=1,x,term=1,tol=1e-6f;
+    float exactEx;//Exact value of x
+    float approxEx=1,x;//Approximate value of x
+    float term=1;
+    float tol=1e-6f;
     int count;
     //Prompt the user for input
     cout<<"Calculate e^x"<<endl;

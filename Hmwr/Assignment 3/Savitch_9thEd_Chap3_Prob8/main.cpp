@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
- * Author: Dr. Mark E. Lehr
- * Created on January 20, 2015, 6:45 PM
+ * Author: Oscar Mayorga
+ * Created on January 20, 2015, 9:45 PM
  *      Purpose:Infinite Sequence approx PI
  */
 
@@ -22,7 +22,8 @@ const float PI=4*atan(1);
 int main(int argc, char** argv) {
     //Declare Variables
     float approxPi=1.0f;
-    unsigned int terms=1,nTerms;
+    unsigned int terms=1;
+    unsigned int nTerms;//Number of Terms
     //Prompt user for number of terms to use
     do{
         cout<<"How many terms in series to use?"<<endl;
