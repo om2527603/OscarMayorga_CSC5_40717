@@ -17,19 +17,33 @@ using namespace std;
 
 //Execution Begins Here!
 int main(int argc, char** argv) {
-    //Declare variables
-    float number;
+    //Declare Variables
+    int strHrs,strMins;
+    int WtHrs,WtMins;
+    int TmAftrH,TmAftrM, hrs, mins;
+    //Calculations
+    hrs=strHrs+WtHrs;
+    mins=strMins+WtMins;
     
-    cout<<"Enter the amount of cents you have to give ="<<endl;
-    cin>>number;
-    //calculations
-    int quarters=number/25;
-    int amtleft1=number/25;
-    int anmtleft2=number/25/0.10;
-    //output
-    cout<<"You have to give = ";
-    cout<<quarters;
-    cout<<"quarters, ";
+    //Prompt for the start time
+    cout<<"Input the Current Time"<<endl;
+    cout<<"The Hour, The Minutes"<<endl;
+    cin>>strHrs>>strMins;
+    //Prompt for the waiting time
+    cout<<"Input the waiting Time"<<endl;
+    cout<<"The Hour, The Minutes"<<endl;
+    cin>>WtHrs>>WtMins;
+    //output the results 
+    if (mins<60){
+    cout<<"The time after waiting would be = "<<endl;
+    hrs=strHrs+WtHrs;
+    mins=strMins+WtMins;
+    cout<<hrs<<":"<<mins;
+    }
+    else {
+        cout<<"Enter o'clock hours!!";
+                
+    }
    
             
     return 0;
