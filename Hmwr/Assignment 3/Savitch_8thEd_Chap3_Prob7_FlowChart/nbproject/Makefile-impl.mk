@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Savitch_8thEd_Chap3_Prob7
+PROJECTNAME=Savitch_8thEd_Chap3_Prob7_FlowChart
 
 # Active Configuration
 DEFAULTCONF=Debug
