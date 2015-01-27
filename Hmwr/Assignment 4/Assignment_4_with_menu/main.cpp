@@ -22,21 +22,26 @@ float atrForc(float,float,float);
 float atrForc(float m1,float m2,float d){
     return G*m1*m2/d/d;
 }
+const float LITGAL=.264179;//liters per gallon
+float fnMPG (float, float);
+float fnMPG (float x,float y){
+return x/y;
+}
 
 //Function Prototypes
 
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Assignment 2 Menu Prompt
-    cout<<"Solution 1 Gaddis 7thEd Chap 5 Prob 07"<<endl;
-    cout<<"Solution 2 Gaddis 7thEd Chap 5 Prob 11"<<endl;
-    cout<<"Solution 3 Gaddis 7thEd Chap 5 Prob 22"<<endl;
+    cout<<"Solution 1 Gaddis 7thEd  Chap 5 Prob 07"<<endl;
+    cout<<"Solution 2 Gaddis 7thEd  Chap 5 Prob 11"<<endl;
+    cout<<"Solution 3 Gaddis 7thEd  Chap 5 Prob 22"<<endl;
     cout<<"Solution 4 Savitch 8thEd Chap4 Prob 07"<<endl;
     cout<<"Solution 5 Savitch 9thEd Chap4 Prob 07"<<endl;
-    cout<<"Solution 6 Savitch 9thEd Chap  Prob 0"<<endl;
-    cout<<"Solution 7 Savitch thEd Chap  Prob 0"<<endl;
-    cout<<"Solution 8 savitch 9thEd Chap  Prob 0"<<endl;
-    cout<<"Solution 9 savitch 9thEd Chap  Prob 0"<<endl;
+    cout<<"Solution 6 Savitch 9thEd Chap4 Pract Prob 01"<<endl;
+    cout<<"Solution 7 Savitch 9thEd Chap4 Pract Prob 02"<<endl;
+    cout<<"Solution 8 Gaddis  8thEd Chap5 Prob 03"<<endl;
+    cout<<"Solution 9 Gaddis  8thEd Chap5 Prob 05"<<endl;
 
     cout<<"Input which solution you would like to see"<<endl;
     int choice;
@@ -176,13 +181,67 @@ int main(int argc, char** argv) {
         
         
         case 6:{
-            
+            float litogas;
+float carmile;
+float galogas;
+float mpg;
+string repeat;
+cout << "I can find your car's mpg." << endl;
+do{
+cout << "How many liters of gasoline has your car consumed? : ";
+cin >> litogas;
+cout << "And how far (in miles) have you driven? : ";
+cin >> carmile;
+galogas = litogas*LITGAL;
+mpg = fnMPG (carmile,galogas);
+cout << "Your current mpg is " << mpg << " miles per gallon." << endl;
+cout << "Would you like to calculate another mpg? (Y/N) : ";
+cin >> repeat;
+}while(repeat!="N");
+cout << "Have a nice day." << endl;
+       
             break; 
          }
         
         
         case 7:{
             cout<<"You have chosen Solution 7"<<endl;
+            float litogas;
+float carmile;
+float galogas;
+float mpg;
+float litogas2;
+float carmile2;
+float galogas2;
+float mpg2;
+string repeat;
+cout << "I can find two car's mpgs and compare them." << endl;
+do{
+cout << "How many liters of gasoline has the first car consumed? : ";
+cin >> litogas;
+cout << "And how far (in miles) has that car driven? : ";
+cin >> carmile;
+galogas = litogas*LITGAL;
+mpg = fnMPG (carmile,galogas);
+cout << "How many liters of gasoline has the second car consumed ? : ";
+cin >> litogas2;
+cout << "And how far (in miles) has that car driven? : ";
+cin >> carmile2;
+galogas2 = litogas2*LITGAL;
+mpg2 = fnMPG (carmile2,galogas2);
+cout << "The current mpg of the first car is " << mpg << " miles per gallon." << endl;
+cout << "While the current mpg of the second car is " << mpg2 << " miles per gallon." << endl;
+if(mpg>mpg2){
+cout << "Clearly, your first car is more fuel efficient." << endl;
+}else if(mpg<mpg2){
+cout << "Clearly, your second car is more fuel efficient." << endl; 
+}else if(mpg==mpg2){
+cout << "Miraculously, both cars have the exact same fuel efficency." << endl;
+}
+cout << "Would you like to compare two more cars? (Y/N) : ";
+cin >> repeat;
+}while(repeat!="N");
+cout << "Have a nice day." << endl;
             
             break; 
          }
@@ -190,6 +249,20 @@ int main(int argc, char** argv) {
         
         case 8:{
             cout<<"You have chosen Solution 8"<<endl;
+             //declare variables
+    int yrs;
+    int totYr;//Total Years 
+    float totRisin = totYr*1.5;
+    //prompt for input
+    cout<<"How high will the sea levels be?"<<endl;
+    cout<<"Input the Amount of years to see: "<<endl;
+    cout<<"how high the sea level would be? :"<<endl;
+    cin>>yrs;
+    //create the loop
+    for(totYr=1; totYr<=yrs; totYr++){
+        float totRisin = totYr*1.5;
+        cout<<"In "<<totYr<<" Years the sea Rose : "<<totRisin<<" mm"<<endl; 
+    }
             
             break; 
          }
@@ -197,7 +270,22 @@ int main(int argc, char** argv) {
         
         case 9:{
             cout<<"You have chosen Solution 9"<<endl;
-           
+           //declare variables
+    float yrCst = 2500;
+    float increas =.04; // percent of increase yearly
+    float yrs = 1;
+    float newCost = yrCst*pow(1+increas,yrs);
+    // output the results
+    cout<<"Country club prices will be going up"<<endl;
+    cout<<"4 percent for the next 6 years"<<endl;
+    cout<<"Year             Price"<<endl;
+    cout<<"__________________________"<<endl;
+    while(yrs<=6){
+        float newCost = yrCst*pow(1+increas,yrs);
+        cout<<"Year "<<yrs<<" will cost $"<<newCost<<endl;
+        yrs++;
+    }
+    //Exit stage right!
              
             break; 
          }
