@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Assignment2_Mayorga_Oscar_WithMenu
+PROJECTNAME=CppApplication_1
 
 # Active Configuration
 DEFAULTCONF=Debug
