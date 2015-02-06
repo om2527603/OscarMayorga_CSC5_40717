@@ -24,8 +24,7 @@ int main(int argc, char** argv) {
                      "Freddy Krueger"};
     string phonesNumbers[]= {"333-8000", "333-2323",
                               "333-6150", "339-7970"};
-    string targetPhone, targetName;
-    void lookupName;
+    string targetPhone, targetName, lookupName;
     char c ;
     do
     {cout<<"Enter a name to find the "
