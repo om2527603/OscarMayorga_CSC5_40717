@@ -14,7 +14,8 @@ using namespace std;
 int  play(int&, int, int&, int, int&, char&);
 int  getDiff();
 int  plcTnk();
-//Begin execution here
+
+//Execution begins here
 int main(){
 
     //Declare variables
@@ -69,4 +70,39 @@ int main(){
     }while(choice=='y'||choice=='Y');
     
     return 0;
+}
+//function for selecting difficulty
+int getDiff(){
+    char chc;
+    int diff;
+    //Prompt for difficulty
+    cout<<"How Difficult you want the game to be?"<<endl;
+    cout<<"Type 'e' for easy, type 'h' for hard"<<endl;
+    cin>>chc;
+
+    //Input 
+    while(chc!='e'&&chc!='E' && chc!='h'&&chc!='H'){
+        cout<<"Invalid choice, type E or H"<<endl;
+        cin>>chc;
+        cout<<endl;
+    }
+    //Initialize difficulty by setting explosive blast radius
+    if(chc == 'e'||chc == 'E'){
+        cout<<"Easy mode activated!"<<endl;
+        cout<<"Cluster bombs enabled"<<endl;
+        cout<<"Blast radius: 70m"<<endl;
+        diff = 70;
+    }
+    else if(chc == 'h'||chc == 'H'){
+        cout<<"Hard mode!"<<endl;
+        cout<<"projectile blast radius: 30m"<<endl;
+        diff = 30;
+    }
+    return diff;
+}
+//Function to place tank
+int plcTnk(){
+    int x;
+    x = 1 + rand() % 999;
+    return x;
 }
