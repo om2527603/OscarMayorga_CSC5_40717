@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
     //Determine if correct
     if(totTim>endTim-begTim){
        if(ans==(x+y)){cout<<"You are Correct"<<endl;
-       /* LEVEL 2
+      // LEVEL 2
     //Initialize the random number seed
     srand(static_cast<unsigned int>(time(0)));
     //Declare 2 variables
@@ -128,7 +128,7 @@ int main(int argc, char** argv) {
    }
        
        return 0;
-       }//end 2nd level */
+       }//end 2nd level 
        }
         else{ cout<<"You are wrong"<<endl;
         cout<<"      |==========||"<<endl;
@@ -245,7 +245,7 @@ int main(int argc, char** argv) {
         cout<<" ________________||"<<endl;}
         cin>>ans;
         if(ans==(x+y)){cout<<"You are Correct"<<endl;
-        /* LEVEL 2
+    // LEVEL 2
     //Initialize the random number seed
     srand(static_cast<unsigned int>(time(0)));
     //Declare 2 variables
@@ -333,22 +333,11 @@ int main(int argc, char** argv) {
    }
         
         return 0;
-        }//2nd level end here*/
+        }//2nd level end here
         }
-        else{ cout<<"You are wrong"<<endl;
-        cout<<"      |==========||"<<endl;
-        cout<<"      |          ||"<<endl;
-        cout<<"    ,''',        ||"<<endl;
-        cout<<"    ',,,'        ||"<<endl;
-        cout<<"    | | |        ||"<<endl;
-        cout<<"   |  |  |       ||"<<endl;
-        cout<<"      |          ||"<<endl;
-        cout<<"                 ||"<<endl;
-        cout<<"                 ||"<<endl;
-        cout<<" ________________||"<<endl;}
         cin>>ans;
         if (ans==(x+y)){ cout<<"You are Correct"<<endl;
-        /* LEVEL 2
+        // LEVEL 2
     //Initialize the random number seed
     srand(static_cast<unsigned int>(time(0)));
     //Declare 2 variables
@@ -436,9 +425,9 @@ int main(int argc, char** argv) {
    }
         
         return 0;
-        }*/
-        }
-        else{ cout<<"You are wrong"<<endl;
+        
+        
+        }        else{ cout<<"You are wrong"<<endl;
         cout<<"      |==========||"<<endl;
         cout<<"      |          ||"<<endl;
         cout<<"    ,''',        ||"<<endl;
@@ -450,23 +439,6 @@ int main(int argc, char** argv) {
         cout<<"    |   |        ||"<<endl;
         cout<<" ________________||"<<endl;}
         cout<<"LOSER!!! "<<endl;
-        }
-    }else{
-        cout<<"You took too much time!"<<endl;
-        cout<<"Time allowed = "<<totTim<<endl;
-        cout<<"Your time = "<<endTim-begTim<<endl;
-        cout<<"      |==========||"<<endl;
-        cout<<"      |          ||"<<endl;
-        cout<<"    ,''',        ||"<<endl;
-        cout<<"    ',,,'        ||"<<endl;
-        cout<<"    | | |        ||"<<endl;
-        cout<<"   |  |  |       ||"<<endl;
-        cout<<"      |          ||"<<endl;
-        cout<<"     | |         ||"<<endl;
-        cout<<"    |   |        ||"<<endl;
-        cout<<" ________________||"<<endl;
-        cout<<"LOSER!!! "<<endl;
-   }
     
     //Exit stage right
     return 0;
