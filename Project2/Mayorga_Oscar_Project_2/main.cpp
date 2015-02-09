@@ -5,15 +5,29 @@
  */
 //Libraries
 #include <iostream>
+#include <ctime>
+#include <iomanip>
 #include <cstdlib>
+#include <cmath>
+#include <fstream>
+#include <string>
 using namespace std;
 
-//Global variables and constants
-
+//Global constants
+const float PI = 3.14;
+const float G = 9.8;
 //Function prototypes
 int  play(int&, int, int&, int, int&, char&);
 int  getDiff();
 int  plcTnk();
+void highscores(int, int);
+
+
+//initialize structure for high scores
+    struct highscore{
+        string name;
+        int score;
+    };
 
 //Execution begins here
 int main(){
@@ -105,4 +119,58 @@ int plcTnk(){
     int x;
     x = 1 + rand() % 999;
     return x;
+}
+//Function for user firing input
+void input(int &a,int &p){
+    
+        //Prompt the user for inputs
+        do{
+        cout<<"Input firing angle (0-90)"<<endl;
+        cin>>a;
+    }while(a>90||a<0);
+        do{
+        cout<<"Input projectile power in meters per second (1-100)"<<endl;
+        cin>>p;
+        }while(p>100||p<0);
+}
+
+//Function calculating where projectile hits
+int ballDst(int a, int p){
+
+    float d;
+    
+    d = ((p*p)*sin(2*(a*(PI/180))))/G;
+    return d;
+}
+
+//Function testing if projectile hit
+bool hitMiss(float dist, int t, char diff){
+    
+    //test if projectiles blast radius hit tank
+    if (dist > t-diff && dist < t+diff){
+        return true;
+    }
+    else
+        return false;
+}
+
+//Function for displaying hit information
+void hitDisp(bool hit, int d, int t){
+
+    if(hit==true){
+        cout<<"Target hit!"<<endl;
+        cout<<"Tank was at "<<t<<"m"<<endl;
+    }
+    if(hit==false){
+        cout<<"Target missed..."<<endl;
+
+        //Display if too close or too far
+        if(d<t-10){
+            cout<<"Shot too close"<<endl;
+        }
+        else if(d>t+10){
+            cout<<"Shot too far"<<endl;
+        }
+    }
+    cout<<endl<<endl;
 }
