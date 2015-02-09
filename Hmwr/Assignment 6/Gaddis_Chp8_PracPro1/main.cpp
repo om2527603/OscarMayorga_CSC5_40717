@@ -16,17 +16,14 @@ using namespace std;
 
 //Execution starts here!
 int searchList(int [], int, int);//linear search method
-const int arraySize = 18;//constant integer variable setting array size 18, corresponds to the account numbers given by book
-int searchList(int list[], int numElems, int value)
-{
+const int arraySize=18;//constant integer variable setting array size 18, corresponds to the account numbers given by book
+int searchList(int list[], int numElems, int value){
 int index=0;//subscript to search array
 int position=-1;//record position of search value
 bool found=false;// boolean to indicate if the value was found, found is set to false
 
-while(index<numElems&&!found)
-{
- if (list[index]== value)//If the value is found
- {
+while(index<numElems&&!found){
+ if (list[index]== value){//If the value is found
     found=true;//Set the flag
     position=index;//Record the value's subscript
  }
@@ -36,8 +33,7 @@ index++;// Go to the next element
 return position;// Return the position, or -1
 }
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv){
 int tests[arraySize] = {5658845, 450125, 7895122, 8777541, //account numbers given, 18 in total
 8451277,1302850, 8080152, 4562555, 5552012, 5050552, 7825877,
 1250255,1005231, 654231, 3852085, 7576651, 7881200, 4581002};
@@ -52,8 +48,7 @@ if (results == -1){
     cout << "The number entered is invalid."; //Displays the number given by user is invalid, instructed by book
     cout<<endl;
 }
-else
-{
+else{
     cout<<"The number entered is valid."; //Displays the number is valid, instructed	
     cout<<endl;
     cout<<(results)<<endl;	

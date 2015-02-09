@@ -20,9 +20,6 @@ const int Numb = 10; //constant set as an integer Num = 10
 
 //Execution starts here!
 
-/*
- * 
- */
 int main(int argc, char** argv) {
 
 int mn; //holds the smallest value
