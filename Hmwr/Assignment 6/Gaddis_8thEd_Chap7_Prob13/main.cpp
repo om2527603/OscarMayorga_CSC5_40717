@@ -1,7 +1,7 @@
 /*
 * File: main.cpp
 * Author: Oscar Mayorga
-* Created on February 6, 2014, 9:15 PM
+* Created on February 6, 2015, 9:15 PM
 * Purpose: Homework Gaddis_Chap7_Prob13
 */
 
