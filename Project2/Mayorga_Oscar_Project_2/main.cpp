@@ -3,6 +3,7 @@
  *  Purpose: Spot a Tank
  *  Project 2
  */
+
 //Libraries
 #include <iostream>
 #include <ctime>
