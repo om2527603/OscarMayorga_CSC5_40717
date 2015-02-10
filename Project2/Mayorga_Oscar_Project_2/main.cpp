@@ -21,7 +21,10 @@ int  play(int&, int, int&, int, int&, char&);
 int  getDiff();
 int  plcTnk();
 void highscores(int, int);
-
+bool hitMiss(float, int, char);
+void input(int &, int &);
+int  ballDst(int, int);
+void hitDisp(bool, int, int);
 
 //initialize structure for high scores
     struct highscore{
@@ -173,4 +176,193 @@ void hitDisp(bool hit, int d, int t){
         }
     }
     cout<<endl<<endl;
+}
+int play(int &tnkPos, int diff, int &score, int ammo, int &att, char &b){
+
+    int ang, power;
+    float dist;
+    bool hit;
+    
+    //show how many shots left
+    cout<<"Tank is approx. "<<tnkPos<<" meters away."<<endl;
+    cout<<"You have "<<ammo<<" shots left."<<endl;
+
+    //Prompt user for firing instructions
+    input (ang, power);
+
+    //calculate projectile distance
+    dist = ballDst(ang, power);
+    cout<<endl<<endl;
+
+    //test if hit or miss
+    hit = hitMiss(dist, tnkPos, diff);
+    cout<<"your projectile hit "<<dist<<" meters"<<endl<<endl;
+
+    //Display if hit or miss
+    hitDisp(hit, dist, tnkPos);
+    
+    //increment bonus tester
+    att++;
+
+    //if hit, move tank, increment score
+    if(hit==true){
+        
+        tnkPos = plcTnk();
+        score+=50;
+        
+        //if tank was destroyed on first try, reward with extra shot
+        if(att==1){
+            cout<<"Hole in one bonus!"<<endl;
+            cout<<"Extra shot rewarded"<<endl<<endl;
+            b = 1;
+        }
+        //reset number of attempts for next tank to 0
+        if(ammo>1){
+        cout<<"Another tank spotted!"<<endl<<endl;
+        }
+        att=0;
+    }
+    return score;
+
+}
+void highscores(int score, int diff){
+    
+    string name;
+    fstream easyFile, hardFile;
+    highscore scores[11];
+    
+    //High scores for easy
+        if(diff==70){
+        //read in high scores from file
+         easyFile.open("easyscores.txt",ios::in);
+
+         //bring in values from file
+         for(int i=0;i<10;i++){
+
+             easyFile>>scores[i].name;
+             easyFile>>scores[i].score;
+
+         }
+
+        //Close file
+        easyFile.close();
+        //test users new score
+         if(score>scores[9].score){
+
+             cout<<"New High Score!"<<endl;
+             cout<<"Input name:"<<endl;
+             cin>>name;
+
+             //set new score to 11th spot in array
+             scores[10].name = name;
+             scores[10].score = score;
+
+             //sort scores
+             for(int i = 10; i>0;i--){
+                 if (scores[i].score > scores[i-1].score){
+                     //set temp value
+                     scores[11].score = scores[i].score;
+                     scores[i].score = scores[i-1].score;
+                     scores[i-1].score = scores[11].score;
+
+                     //sort names
+                     scores[11].name = scores[i].name;
+                     scores[i].name = scores[i-1].name;
+                     scores[i-1].name = scores[11].name;
+                 }
+
+             }
+         }
+
+         //Close file
+         easyFile.close();
+
+         //Open file for writing
+         easyFile.open("easyscores.txt", ios::out);
+
+         //Clear file for writing
+         easyFile.clear();
+
+         //write scores to file
+         for(int i = 0; i<10;i++){
+             easyFile<<scores[i].name<<setw(15)<<scores[i].score<<endl;
+         }
+
+         //close that file
+         easyFile.close();
+
+         //output high scores
+         cout<<"Easy High Scores!\n"<<endl;
+         for(int i=0; i<10;i++){
+         cout<<scores[i].name<<setw(10)<<scores[i].score<<endl;
+         }
+        }
+        
+        //high scores for hard
+        else if(diff==30){
+            //read in high scores from file
+            hardFile.open("hardscores.txt",ios::in);
+
+            //bring in values from file
+            for(int i=0;i<10;i++){
+
+                hardFile>>scores[i].name;
+                hardFile>>scores[i].score;
+
+            }
+
+            //test users new score
+            if(score>scores[9].score){
+
+                cout<<"New High Score!"<<endl;
+                cout<<"Input name:"<<endl;
+                cin>>name;
+
+                //set new score to 11th spot in array
+                scores[10].name = name;
+                scores[10].score = score;
+
+                //sort scores
+                for(int i = 10; i>0;i--){
+                    if (scores[i].score > scores[i-1].score){
+                        //set temp value
+                        scores[11].score = scores[i].score;
+                        scores[i].score = scores[i-1].score;
+                        scores[i-1].score = scores[11].score;
+
+                        //sort names
+                        scores[11].name = scores[i].name;
+                        scores[i].name = scores[i-1].name;
+                        scores[i-1].name = scores[11].name;
+                    }
+
+                }
+            }
+
+            //Close file
+            hardFile.close();
+
+            //Open file for writing
+            hardFile.open("hardscores.txt", ios::out);
+
+            //Clear file for writing
+            hardFile.clear();
+
+            //write scores to file
+            for(int i = 0; i<10;i++){
+                hardFile<<scores[i].name<<setw(15)<<scores[i].score<<endl;
+            }
+
+            //close that file
+            hardFile.close();
+
+            //output high scores
+            cout<<"Hard High Scores!"<<endl;
+            cout<<endl;
+            for(int i=0; i<10;i++){
+            cout<<scores[i].name<<setw(10)<<scores[i].score<<endl;
+            }
+        }
+    
+    
 }
