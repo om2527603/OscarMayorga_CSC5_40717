@@ -165,7 +165,7 @@ void hitDisp(bool hit, int d, int t){
         cout<<"Target hit!"<<endl;
         cout<<"Tank was at "<<t<<"m"<<endl;
     }
-    if(hit==false){
+    else if(hit==false){
         cout<<"Target missed..."<<endl;
 
         //Display if too close or too far
