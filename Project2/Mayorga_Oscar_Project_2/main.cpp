@@ -40,6 +40,10 @@ int main(){
     int attempt, tnkPos, score, diff, ammo, att=0;
     float dist;
     char choice, b;
+     char chc;
+    int diff;
+    int x;
+    float d;
     
     //Display title and story
     cout<<" Fatal Trajectory "<<endl;
